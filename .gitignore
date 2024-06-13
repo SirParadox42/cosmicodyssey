@@ -1,0 +1,5 @@
+/frontend-web/.env
+/frontend-web/.env.production
+/frontend-web/node_modules
+/backend/.env
+/backend/node_modules

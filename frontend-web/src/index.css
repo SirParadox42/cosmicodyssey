@@ -1,0 +1,325 @@
+body {
+  margin: 0;
+  background: linear-gradient(white, rgb(162, 162, 222)) no-repeat fixed;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  font-family: 'Space Grotesk';
+  transition: .2s;
+}
+
+.animate {
+  animation: animate .5s;
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#webname {
+  font-size: 40px;
+  width: 307px;
+  color: white;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#links {
+  width: 550px;
+}
+
+.navlink {
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  text-decoration: none;
+  padding: 0 5px;
+  font-size: 18px;
+  color: white;
+  border-bottom-right-radius: 5px;
+}
+
+.navlink.active {
+  border-bottom: 2px solid white;
+  border-right: 2px solid whitesmoke;
+}
+
+#nav {
+  background: linear-gradient(rgb(1, 1, 80), rgb(0, 0, 50));
+  border-bottom: 5px inset white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.header {
+  font-style: italic;
+  margin: 40px 10%;
+  width: 80%;
+  border-bottom: 3px solid black;
+}
+
+p {
+  font-size: 17px;
+  width: 80%;
+  margin: auto;
+}
+
+#pickimage {
+  text-align: center;
+}
+
+#file {
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  border: 3px outset white;
+}
+
+button {
+  display: block;
+  margin: 30px auto;
+  font-size: 20px;
+  border-radius: 5px;
+  background: linear-gradient(rgb(1, 1, 80), rgb(0, 0, 50));
+  color: white;
+  cursor: pointer;
+  border: 3px outset white;
+}
+
+#webname2 {
+  position: relative;
+  right: 2px;
+}
+
+.post {
+  color: white;
+  background: linear-gradient(rgb(1, 1, 80), rgb(0, 0, 50));
+  padding: 20px 0;
+  border: 3px solid white;
+  margin: -40px 0;
+}
+
+#posts {
+  position: relative;
+  width: 80%;
+  left: 10%;
+}
+
+.postimg {
+  width: 100%;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.postdesc {
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+}
+
+.first {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.last {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 10%;
+}
+
+.creators {
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.title {
+  margin: -20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 406px) {
+  .creators {
+    display: block;
+  }
+}
+
+.buttons {
+  margin: -20px 10%;
+}
+
+#change {
+  width: 150px;
+  display: flex;
+}
+
+#vote {
+  width: 130px;
+  display: flex;
+}
+
+.background {
+  background-color: black;
+  position: fixed;
+  z-index: 1;
+  opacity: .5;
+  top: 0;
+  right: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+#delete {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background: linear-gradient(rgb(1, 1, 80), rgb(0, 0, 50));
+  padding: 10px;
+  border-radius: 10px;
+  border: 3px solid white;
+  height: 150px;
+  text-align: center;
+}
+
+#buttons {
+  width: 110px;
+  margin: auto;
+  position: relative;
+  bottom: 25px;
+}
+
+#newpost {
+  margin: 30px auto;
+  position: relative;
+  bottom: 25px;
+}
+
+#nav1 {
+  display: flex;
+}
+
+#nav2 {
+  display: none;
+}
+
+#lines {
+  width: 40px;
+  cursor: pointer;
+}
+
+#sidebar {
+  top: 0;
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background: linear-gradient(white, rgb(162, 162, 222)) no-repeat fixed;
+  border-right: 3px solid white;
+}
+
+#sidebar .navlink {
+  display: block;
+  color: black;
+  border-color: black;
+  width: 100px;
+}
+
+#column {
+  flex-direction: column;
+  height: 50%;
+  justify-content: space-evenly;
+}
+
+.center {
+  text-align: center;
+}
+
+input, textarea {
+  margin: 30px auto;
+  width: 300px;
+  height: 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  display: block;
+  padding: 15px;
+  border: 3px inset black;
+}
+
+textarea {
+  height: 60px;
+}
+
+.invalid p, h2.invalid {
+  color: rgb(116, 5, 5);
+}
+
+.label {
+  margin: -20px auto;
+  text-align: center;
+  font-size: 15px;
+}
+
+.invalid input, .invalid textarea {
+  background-color: rgb(116, 5, 5);
+  opacity: .5;
+}
+
+form {
+  margin: 75px;
+}
+
+#loading {
+  width: 300px;
+  margin: -100px auto;
+  display: block;
+}
+
+#circle {
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.highest {
+  width: 80%;
+  position: relative;
+  left: 10%;
+}
+
+@media screen and (max-width: 870px) {
+  #nav1 {
+    display: none;
+  }
+  
+  #nav2 {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .invalid p {
+    font-size: 12px;
+  }
+}
