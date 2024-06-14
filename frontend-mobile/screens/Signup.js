@@ -25,7 +25,7 @@ export default function Login(props) {
         if (userValid && emailValid && passwordValid && selectedImage) {
             const formData = new FormData();
             formData.append('username', userInput);
-            formData.append('image', {uri: selectedImage.uri, type: 'image/jpeg', name: 'profile.jpeg', size: selectedImage.fileSize});
+            formData.append('image', {uri: selectedImage.uri, type: 'image/jpeg', size: selectedImage.fileSize});
             formData.append('email', emailInput);
             formData.append('password', passwordInput);
 
@@ -47,7 +47,7 @@ export default function Login(props) {
                 <Input message={userInvalid ? 'Input can\'t be empty.' : ''} input={{placeholder: 'Username', autoCorrect: false, autoCapitalize: false, value: userInput, onChangeText: handleUserChange, onBlur: handleUserBlur}}/>
                 <ImagePicker onSelectImage={handleSelectImage}/>
                 <Input message={emailInvalid ? 'Input can\'t be empty.' : ''} input={{placeholder: 'Email', autoCorrect: false, autoCapitalize: false, value: emailInput, onChangeText: handleEmailChange, onBlur: handleEmailBlur}}/>
-                <Input message={passwordInvalid ? 'Input length must be greater than 7.' : ''} input={{placeholder: 'Password', autoCorrect: false, autoCapitalize: false, secureTextEntry: true, value: passwordInput, onChangeText: handlePasswordChange, onBlur: handlePasswordBlur}}/>
+                <Input message={passwordInvalid ? 'Input must be more than 7 characters.' : ''} input={{placeholder: 'Password', autoCorrect: false, autoCapitalize: false, secureTextEntry: true, value: passwordInput, onChangeText: handlePasswordChange, onBlur: handlePasswordBlur}}/>
                 <Button onPress={signup} style={styles.button}>Signup</Button>
             </View>
         </ScrollView>
