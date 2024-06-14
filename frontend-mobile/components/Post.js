@@ -5,6 +5,7 @@ import {Ionicons} from '@expo/vector-icons';
 import Button from './Button';
 import useHttp from '../hooks/useHttp';
 import {context} from '../store/context';
+import {REACT_APP_BACKEND_URL} from '@env';
 
 export default function Post(props) {
     const ctx = useContext(context);
@@ -28,7 +29,7 @@ export default function Post(props) {
                 <Text style={[styles.font, styles.title]}>{props.title}</Text>
                 <Text style={styles.font}>Created by {props.creator.username} on {props.createdAt}</Text>
             </View>
-            <Image style={styles.image} source={{uri: `https://cosmicodyssey.onrender.com/${props.image}`}}/>
+            <Image style={styles.image} source={{uri: `${REACT_APP_BACKEND_URL}/${props.image}`}}/>
             <View style={styles.descriptionContainer}>
                 <Text style={[styles.font, styles.description]}>{props.description}</Text>
             </View>
