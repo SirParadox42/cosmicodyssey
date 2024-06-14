@@ -10,5 +10,5 @@ export default function useInput(validation) {
     const handleBlur = () => setTouched(true);
     const handleSubmit = () => setTouched(valid ? false : true);
 
-    return [input, valid, handleChangeText, handleBlur, handleSubmit, invalid, setInput];
+    return [input, valid, handleChangeText, handleBlur, handleSubmit, invalid, setInput, setTouched];
 }
