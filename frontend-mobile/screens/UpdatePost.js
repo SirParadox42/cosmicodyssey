@@ -39,6 +39,7 @@ export default function UpdatePost(props) {
         };
 
         dataFetcher();
+        props.navigation.setOptions({headerBackTitle: 'Posts'});
     }, [props.navigation]);
 
     return (
