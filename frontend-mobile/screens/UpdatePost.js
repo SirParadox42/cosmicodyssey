@@ -19,7 +19,7 @@ export default function UpdatePost(props) {
 
         if (titleValid && descriptionValid) {
             try {
-                await sendRequest(`post/${props.route.params.id}`, 'PATCH', JSON.stringify({title: titleInput, description: descriptionInput}), {'Content-Type': 'application/json', Authorization: `Bearer ${ctx.token}`});
+                await sendRequest(`post/${props.route.params.postId}`, 'PATCH', JSON.stringify({title: titleInput, description: descriptionInput}), {'Content-Type': 'application/json', Authorization: `Bearer ${ctx.token}`});
                 props.navigation.navigate('Posts');
             } catch(err) {
                 Alert.alert('Error', err.message, [{text: 'Ok'}]);
