@@ -7,10 +7,10 @@ export function ContextProvider({children}) {
     const [token, setToken] = useState(null);
     const [userId, setUserId] = useState(null);
 
-    const login = (token, userId, image) => {
+    const login = (token, userId) => {
         setToken(token);
         setUserId(userId);
-        AsyncStorage.setItem('userData', JSON.stringify({token, userId, image}));
+        AsyncStorage.setItem('userData', JSON.stringify({token, userId}));
     };
     const logout = () => {
         setToken(null);
