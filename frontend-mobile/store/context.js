@@ -10,17 +10,17 @@ export function ContextProvider({children}) {
     const login = (token, userId) => {
         setToken(token);
         setUserId(userId);
-        AsyncStorage.setItem('userData', JSON.stringify({token, userId}));
+        AsyncStorage.setItem('cosmicOdysseyUserData', JSON.stringify({token, userId}));
     };
     const logout = () => {
         setToken(null);
         setUserId(null);
-        AsyncStorage.removeItem('userData');
+        AsyncStorage.removeItem('cosmicOdysseyUserData');
     };
 
     useEffect(() => {
         const getStoredData = async() => {
-            const storedData = await AsyncStorage.getItem('userData');
+            const storedData = await AsyncStorage.getItem('cosmicOdysseyUserData');
 
             if (storedData) {
                 const parsedData = JSON.parse(storedData);
