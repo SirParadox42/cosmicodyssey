@@ -12,7 +12,7 @@ export default function Post(props) {
     const navigation = useNavigation();
     const [isLoading, sendRequest] = useHttp();
     
-    const handleEdit = () => navigation.navigate('Update Post', {id: props.id});
+    const handleEdit = () => navigation.navigate('Update Post', {postId: props.id});
     const handleDelete = () => Alert.alert('Deleting Post', `Are you sure you want to delete ${props.title}?`, [{text: 'No', style: 'cancel'}, {text: 'Yes', onPress: () => props.onDelete(props.id), style: 'destructive'}]);
     const vote = async(path) => {
         try {
