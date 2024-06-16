@@ -25,7 +25,7 @@ export default function Login(props) {
         if (userValid && emailValid && passwordValid && selectedImage) {
             const formData = new FormData();
             formData.append('username', userInput);
-            formData.append('image', {uri: selectedImage.uri, type: 'image/jpeg', size: selectedImage.fileSize});
+            formData.append('image', {uri: selectedImage.uri, type: 'image/jpeg', name: 'profile.jpg', size: selectedImage.fileSize});
             formData.append('email', emailInput);
             formData.append('password', passwordInput);
 
