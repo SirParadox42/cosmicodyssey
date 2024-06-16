@@ -30,7 +30,7 @@ export default function UpdatePost(props) {
     useEffect(() => {
         const dataFetcher = async() => {
             try {
-                const response = await sendRequest(`post/${props.route.params.id}`);
+                const response = await sendRequest(`post/${props.route.params.postId}`);
                 setTitleInput(response.post.title);
                 setDescriptionInput(response.post.description);
             } catch(err) {
