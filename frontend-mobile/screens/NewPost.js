@@ -23,7 +23,7 @@ export default function NewPost(props) {
         if (titleValid && selectedImage && descriptionValid) {
             const formData = new FormData();
             formData.append('title', titleInput);
-            formData.append('image', {uri: selectedImage.uri, type: 'image/jpeg', size: selectedImage.fileSize});
+            formData.append('image', {uri: selectedImage.uri, type: 'image/jpeg', name: 'post.jpg', size: selectedImage.fileSize});
             formData.append('description', descriptionInput);
             formData.append('createdAt', new Date().toLocaleDateString());
             
