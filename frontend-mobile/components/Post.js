@@ -40,7 +40,7 @@ export default function Post(props) {
                         <Button style={styles.margin} onPress={handleDelete}><Ionicons name='trash' size={25} color='white'/></Button>
                     </>
                 )}
-                {ctx.isLoggedIn && props.use && (
+                {props.use && (
                     <>
                         <Button style={styles.margin} onPress={() => vote(props.supernovas.includes(ctx.userId) ? 'unsupernova' : 'supernova')}>{props.supernovas.length} <Ionicons name='flame' size={15} color={props.supernovas.includes(ctx.userId) ? 'orange' : 'white'}/></Button>
                         <Button style={styles.margin} onPress={() => vote(props.blackholes.includes(ctx.userId) ? 'unblackhole' : 'blackhole')}>{props.blackholes.length} <Ionicons name='radio-button-on' size={15} color={props.blackholes.includes(ctx.userId) ? 'orange' : 'white'}/></Button>
